@@ -1,0 +1,62 @@
+.website-title {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.website-link {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.work-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.work-list-item {
+  transform: translateY(0);
+  display: block;
+  /* border-bottom: 1px solid #dadada; */
+  box-shadow: 0 0 0 rgba(93,93,93,.16);
+  transition: all .3s ease;
+  list-style: none;
+}
+
+.work-list-item-link {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.work-title {
+  flex: 3 1 100%;
+  margin-bottom: 0;
+  letter-spacing: 0;
+  line-height: 1.2;
+  font-size: 1.5rem;
+}
+
+.work-detail {
+  color: #666;
+  font-size: 1rem;
+}
+
+.work-role {
+  flex: 1 1 60%;
+}
+
+.work-company {
+  flex: 1 1 20%;
+}
+
+.work-date {
+  flex: 1 1 20%;
+  align-self: flex-end;
+  text-align: right;
+}

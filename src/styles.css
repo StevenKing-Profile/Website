@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@import "node_modules/bootstrap/dist/css/bootstrap.css";
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: gainsboro;
+  height: 100%;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
