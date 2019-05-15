@@ -21,7 +21,17 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/web.config"
+              "src/web.config",
+              {
+                "glob": "index.js",
+                "input": "./server/",
+                "output": "./"
+              },
+              {
+                "glob": "package.json",
+                "input": "./server/",
+                "output": "./"
+              }
             ],
             "styles": [
               "src/styles.css",
@@ -83,7 +93,8 @@
             "scripts": [],
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/web.config"
             ]
           }
         },
