@@ -5,11 +5,11 @@
         <h1 class="display-4">Hello!</h1>
         <p class="lead"></p>
         <p class="lead">
-          I'm Steven King, a <a href="https://https://github.com/StevenKing-Profile">developer</a>, living in Atlanta, GA and currently working for <span class="font-weight-bold" style="color: #073980">General Motors</span>.
+          I'm Steven King, a <a href="https://github.com/StevenKing-Profile" target="_blank">developer</a>, living in Atlanta, GA and currently working for <span class="font-weight-bold" style="color: #073980">General Motors</span>.
           Sometimes I freelance.
         </p>
         <p class="lead mt-4">
-          <a class="btn btn-primary btn-lg" href="#" role="button">Contact Me</a>
+          <a class="btn btn-primary btn-lg" href="mailto:career@stevenking.net" role="button">Contact Me</a>
         </p>
       </div>
       <div class="col-4">
@@ -24,21 +24,10 @@
     <h6 class="mb-4" style="">My Personal Projects:</h6>
     <div class="container-fluid">
       <div class="row" style="overflow: auto">
-        <div class="col-6" style="overflow: inherit">
-          <h2 class="website-title"><a class="website-link" target="_blank" href="https://overwatch.guide">Overwatch.guide</a></h2>
-          <p class="p-1">
-            Made in WordPress but using a custom made template, it's a guide for Blizard's videogame, Overwatch. Continuously updated
-            over the last 2 years, it receives ~5500 unique visitors a month according to Google Analytics. Also shows off my (lack thereof) photoshop skills!
-          </p>
-          <img class="center" src="assets/OverwatchGuide.jpg" />
-        </div>
-        <div class="col-6" style="overflow: inherit">
-          <h2 class="website-title"><a class="website-link" target="_blank" href="https://wordcounttool.com">WordCountTool.com</a></h2>
-          <p class="p-1">
-            A serverless Angular 6 web application that calculates the number of words in a textarea field, frequency of each word, and
-            can manipulate the case of each word. Uses the @ng-toolkit/universal project to pre-render HTML to improve SEO. Traffic is about 34,000 pageviews a month.
-          </p>
-          <img class="center" src="assets/WordCountTool.jpg" />
+        <div class="col-6" style="overflow: inherit;" *ngFor="let project of projects">
+          <h2 class="website-title"><a class="website-link" target="_blank" href="{{ project.url }}"> {{ project.title }}</a></h2>
+          <p class="p-1">{{ project.description }}</p>
+          <img class="center" src="{{ project.asset }}" />
         </div>
       </div>
     </div>
@@ -52,12 +41,12 @@
       <div class="row" style="overflow: auto">
         <div class="col-12">
           <ul class="work-list">
-            <li class="work-list-item">
-              <a class="work-list-item-link" target="_blank" href="http://www.experientgroup.com/">
-                <h3 class="work-title">Experient Group's Website</h3>
-                <span class="work-detail work-role">Development, UX</span>
-                <span class="work-detail work-company">Experient Group</span>
-                <span class="work-detail work-date">2016</span>
+            <li class="work-list-item" *ngFor="let otherProject of otherProjects">
+              <a class="work-list-item-link" target="_blank" href="{{ otherProject.url }}">
+                <h3 class="work-title"> {{ otherProject.title }}</h3>
+                <span class="work-detail work-role">{{ otherProject.role }}</span>
+                <span class="work-detail work-company">{{ otherProject.company }}</span>
+                <span class="work-detail work-date">{{ otherProject.year }}</span>
               </a>
             </li>
           </ul>

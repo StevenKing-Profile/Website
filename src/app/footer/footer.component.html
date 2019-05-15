@@ -1,13 +1,11 @@
 <footer>
   <div class="pb-3 px-5">
-    <h6 class="mb-4" style="">Contact Me:</h6>
+    <h6 class="mb-4">Contact Me:</h6>
     <div class="container-fluid">
       <div class="col-12">
         <div class="row" style="overflow: auto">
           <ul id="contact-list">
-            <li class="contact-list-item"><a href="https://https://github.com/StevenKing-Profile">Email</a></li>
-            <li class="contact-list-item"><a href="https://https://github.com/StevenKing-Profile">Github</a></li>
-            <li class="contact-list-item"><a href="https://https://github.com/StevenKing-Profile">LinkedIn</a></li>
+            <li class="contact-list-item" *ngFor="let website of websites"><a href="{{ website.url }}" target="_blank"> {{ website.name }} </a></li>
           </ul>
         </div>
       </div>
