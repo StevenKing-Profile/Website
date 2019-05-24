@@ -1,7 +1,7 @@
 <div style="background-color: white;">
   <div class="pt-5 pb-2 px-5">
     <div class="row">
-      <div class="offset-1 col-7">
+      <div class="offset-1 col-md-7 col-sm-12">
         <h1 class="display-4">Hello!</h1>
         <p class="lead"></p>
         <p class="lead">
@@ -12,7 +12,7 @@
           <a class="btn btn-primary btn-lg" href="mailto:career@stevenking.net" role="button">Contact Me</a>
         </p>
       </div>
-      <div class="col-4">
+      <div class="col-md-4 col-sm-12">
         <img src="assets/Circle_Headshot_Small.png" />
       </div>
     </div>
@@ -24,10 +24,10 @@
     <h6 class="mb-4" style="">My Personal Projects:</h6>
     <div class="container-fluid">
       <div class="row" style="overflow: auto">
-        <div class="col-6" style="overflow: inherit;" *ngFor="let project of projects">
+        <div class="col-md-6 col-sm-12" style="overflow: inherit;" *ngFor="let project of projects">
           <h2 class="website-title"><a class="website-link" target="_blank" href="{{ project.url }}"> {{ project.title }}</a></h2>
           <p class="p-1">{{ project.description }}</p>
-          <img class="center" src="{{ project.asset }}" />
+          <img class="center" src="{{ project.asset }}" style="width: 100%"/>
         </div>
       </div>
     </div>
